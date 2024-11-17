@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+
+   
+    <script>
+        
+        let courses = [
+    {"id": 1, 
+            "title": "Computer Science Fundamentals",
+            "description": "Basic principles of computer science, including algorithms, data structures, and programming languages.",
+            "duration": "12 weeks",
+            "fee": 15000,
+            "prerequisite": "None",
+            "aim": "To provide a solid foundation in computer science for beginners.",
+            "additional": "Includes practical assignments and projects.",
+            "image": "course1.jpg"
+        },
+    {"id": 2, 
+      "title": "Web Development",
+      "description": "Designing and building websites using HTML, CSS, JavaScript, and various web development frameworks.",
+      "duration": "10 weeks",
+      "fee": 18000,
+      "prerequisite": "Basic knowledge of computers",
+      "aim": "To equip students with skills to develop professional websites.",
+      "additional": "Hands-on labs and portfolio building.",
+      "image": "course2.jpg"
+    },
+    {"id": 3, 
+      "title": "Cybersecurity",
+      "description": "Protecting computer systems from cyber threats, including hacking, viruses, and data breaches.",
+      "duration": "14 weeks",
+      "fee": 25000,
+      "prerequisite": "Basic understanding of computer networks",
+      "aim": "To train students to safeguard information systems against cyber threats.",
+      "additional": "Certification upon completion.",
+      "image": "course3.jpg"
+    },
+    {"id": 4, 
+      "title": "Data Science and Analytics",
+      "description": "Data analysis, statistics, and machine learning techniques to extract insights from large datasets.",
+      "duration": "16 weeks",
+      "fee": 30000,
+      "prerequisite": "Basic programming knowledge",
+      "aim": "To teach students how to analyze data and extract meaningful insights.",
+      "additional": "Includes real-world case studies.",
+      "image": "course4.jpg"
+    },
+    {"id": 5, 
+      "title": "AI&ML",
+      "description": "Concepts and applications of AI and machine learning, including neural networks, deep learning, and natural language processing.",
+      "duration": "20 weeks",
+      "fee": 35000,
+      "prerequisite": "Basic knowledge of mathematics and programming",
+      "aim": "To provide in-depth knowledge and hands-on experience in AI and machine learning.",
+      "additional": "Hands-on projects and AI labs.",
+      "image": "course5.jpg"
+    }
+]
+document.write("<div id='main'> ")
+document.write("<div id='cardContainer' class='container mt-2'>")
+document.write(<div class='row'>);
+document.write("<div class='col-md-3 p-2'>");
+
+    for(course of courses){
+document.write("<div style='height:300px;box-shadow: 10px 10px 10px grey;' class='d-flex flex-column justify-content-center align-items-center'>");
+
+
+    document.write(`<img src='${course.image}' style='width:100%;height:200px'>`);
+    document.write(<h6 class='text-center' > ${course.title}</h6>);
+
+
+    document.write(<p ><strong class='text-success'>${course.fee} Rs.</strong></p>);
+
+document.write("</div>"); 
+    }
+document.write("</div>"); 
+
+    document.write(" </div>");
+    document.write(" </div>");
+    document.write(" </div>");
+
+    </script>
+</body>
+</html>

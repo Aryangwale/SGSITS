@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>E-medi</title>
+  </head>
+  <body style="background-color: lavender;">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <style>
+    .add{
+        background-color: rgba(216, 113, 113, 0.634);
+    }
+   </style>
+  </body >
+  <script>
+    let dataItem = [{
+        no : 1, 
+        tabName : "Manforce 100mg Strip Of 4 Tablets",
+        comName : "MANKIND PHARMACEUTICALS LTD",
+        price : 216,
+        tabDecs : "Manforce 100 mg tablet is used to treat erectile dysfunction (impotency) in men. It contains sildenafil as its main component. It is not meant for use in women, children & adolescents.",
+        tabimg : "img/tebimg.webp"
+    },{
+        no : 2, 
+        tabName : "Manforce 100mg Strip Of 4 Tablets",
+        comName : "MANKIND PHARMACEUTICALS LTD",
+        price : 216,
+        tabDecs : "Manforce 100 mg tablet is used to treat erectile dysfunction (impotency) in men. It contains sildenafil as its main component. It is not meant for use in women, children & adolescents.",
+        tabimg : "img/tebimg.webp"
+    },{
+        no : 3, 
+        tabName : "Manforce 100mg Strip Of 4 Tablets",
+        comName : "MANKIND PHARMACEUTICALS LTD",
+        price : 216,
+        tabDecs : "Manforce 100 mg tablet is used to treat erectile dysfunction (impotency) in men. It contains sildenafil as its main component. It is not meant for use in women, children & adolescents.",
+        tabimg : "img/tebimg.webp"
+    }]
+
+    document.write("<div class='container'>")
+    // document.write(`<img src='${data.tabimg}''>`)
+    // document.write(`<br><strong>${data.comName}</strong>`)
+    // document.write(`<h3>${data.tabName}</h3>`)
+    // document.write(`<h4> ${data.price} Rs</h4>`)
+    // document.write(`<p>${data.tabDecs}</p>`)
+
+    dataItem.map(data => {
+
+        document.write("<div class='card w-25 m-3' style='display: inline-block'>")
+        document.write(`<img src='${data.tabimg}' class='card-img-top' height=150px>`)
+    
+            document.write("<div>")
+            document.write(`<h5 class='card-title'>${data.tabName}</h5>`)
+            document.write(`<p class='card-text'>${data.tabDecs}</p>`)
+            document.write(`<button class='btn w-100 add' type='button' onclick="moreDetail(${data.no})">More Detail</button>`)
+                
+            document.write("</div>")
+
+    document.write("</div>")
+
+    })
+
+
+    document.write("</div>")
+
+    function moreDetail(no){
+        let data = dataItem[no -1] 
+        console.log(data)
+        // localStorage.setItem(1,"Muskan")
+        document.write("<div class='card w-25 m-3' style='display: inline-block'>")
+        document.write(`<img src='${data.tabimg}' class='card-img-top' height=150px>`)
+    
+            document.write("<div>")
+            document.write(`<h5 class='card-title'>${data.tabName}</h5>`)
+            document.write(`<small class='card-title'>${data.comName}</small>`)
+            document.write(`<br><small class='card-title'>${data.price}RS</small>`)
+            document.write(`<p class='card-text'>${data.tabDecs}</p>`)
+            document.write(`<button class='btn w-100 add' type='button' onclick="moreDetail(${data.no})">More Detail</button>`)
+                
+            document.write("</div>")
+
+    document.write("</div>")
+    }
+  </script>
+</html>
