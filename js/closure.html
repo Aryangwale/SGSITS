@@ -1,0 +1,140 @@
+<script>
+    //     function f1() {
+    //         let x = 10;
+    //         document.write(x)
+    //         return function f2(){
+    //             for (let i = 1; i < 11; i++) {
+    //                 document.write(`${x} X ${i} = ${i * x}<hr>`)
+    //             }
+    //         }
+    //     }
+    //     // f1()()
+
+
+
+    //    async function f2(){
+    //         let x = new Promise((resolve,reject)=>{
+    //             setTimeout(() => {
+    //                 resolve(50)
+    //             }, 3000);
+    //         })
+    //         let y = new Promise((resolve,reject)=>{
+    //             setTimeout(() => {
+    //                 resolve(150)
+    //             }, 8000);
+    //         })
+    //         console.log("x-pending")
+    //         let a= await x;
+    //         console.log("x-completed")
+    //         console.log("y-pending")
+    //         let b = await y;
+    //         console.log("y-completed")
+
+    //         return [a,b]
+    //     }
+    //     f2().then((arr)=>{
+    //         document.write(arr)
+    //     })
+
+
+
+
+    // let x = new Promise((resolve, reject) => {
+    //     resolve(8)
+    // })
+
+    // function y(x) {
+    //     return new Promise((resolve, reject) => {
+    //         resolve(x+2)
+
+    //     })
+    // }
+    // function z(x) {
+    //     return new Promise((resolve, reject) => {
+    //         reject(x+2)
+
+    //     })
+    // }
+    // x.then((result) => {
+    //     y(result).then((c) => {
+    //         z(c).then(v=>{
+    //             document.write(v)
+    //         }).catch(err=>{
+    //             document.write( err + " thired error check")    
+    //         })
+    //     }).catch((err) => {
+    //         document.write(err)
+    //     })
+    // }).catch(err => {
+    //     console.log(err)
+    // })
+
+
+
+
+    // function f(x) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve(x)
+    //         }, 1000);
+    //     })
+
+    // }
+    // function f1(x) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve(x+2)
+    //         }, 6000);
+    //     })
+
+    // }
+    // function f2(x) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve(x+2)
+    //         }, 1000);
+    //     })
+
+    // }
+    // function f3(x) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve(x+2)
+    //         }, 1000);
+    //     })
+
+    // }
+    // async function f4() {
+    //     let a = await f(2)
+    //     document.write(a)
+    //     let b = await f1(a)
+    //     document.write(b)
+    //     let c = await f2(b)
+    //     document.write(c)
+    //     let d = await f3(c)
+    //     document.write(d)
+
+    // }
+    // f4()
+
+    
+    // function f1(){
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             document.write("ok-1")
+    //             resolve()
+    //         }, 3000);
+    //     })
+    // }
+    // function f2(){
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             document.write("ok-2")
+    //             resolve()
+    //         }, 2000);
+    //     })
+    // }
+    // f1()
+    // f2()
+
+</script>

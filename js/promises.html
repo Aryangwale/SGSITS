@@ -1,0 +1,21 @@
+<script>
+    let c = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("C-promise done<br>")
+        }, 1000)
+    })
+
+    c.then((msg) => {
+        document.write(msg)
+        return new Promise((resolve, reject) =>{
+            reject(new Error("inside promise rejected"))
+            
+        })
+
+    }).then((msg2) => {
+        document.write(msg2)
+    }).catch((err2)=>{
+        document.write(err2)
+    })
+
+</script>
