@@ -1,7 +1,7 @@
 import {pool} from "../db/connection.js"
 
 export class Product{
-    constructor(id,product_name ){
+    constructor(id,product_name){
         this.id = id;
         this.product_name = product_name ;
     }
@@ -27,7 +27,48 @@ export class Product{
             })
         })
     }
-
+    static getProductMyId(id){
+        return new Promise((resolve, reject) => {
+            pool.getConnection((err,con)=>{
+                if(err){
+                    reject(err)
+                }
+                else{
+                    const que = "select * from product where id = ?"
+                    con.query(que,[id],(err,result)=>{
+                        con.release()
+                        if(err){
+                            reject(err)
+                        }
+                        else{
+                            resolve(result)
+                        }
+                    })
+                }
+            })
+        })
+    }
+    static updateProduct(id , productname){
+        return new Promise((resolve, reject) => {
+            pool.getConnection((err,con)=>{
+                if(err){
+                    reject(err)
+                }
+                else{
+                    const que = "update product set product_name = ? where id = ?"
+                    con.query(que,[productname,id],(err,result)=>{
+                        con.release()
+                        if(err){
+                            reject(err)
+                        }
+                        else{
+                            resolve(result)
+                        }
+                    })
+                }
+            })
+        })
+    }
     addProduct(){
         return new Promise((resolve, reject) => {
             pool.getConnection((err,con)=>{

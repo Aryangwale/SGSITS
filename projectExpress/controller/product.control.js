@@ -27,3 +27,26 @@ export const allpro = (req,res)=>{
         res.end("fail")
     })
 }
+
+
+export const proUpdate = (req,res)=>{
+    const myid = req.params.id
+    Product.getProductMyId(myid).then(result=>{
+        const pro = result[0];
+        res.render("productUpdate",{pro})
+    }).catch(err=>{
+        console.log(err);
+        res.end("product not found")
+    })
+}
+
+export const proUpdateAction = (req,res)=>{
+    const {id,proname} = req.body 
+    Product.updateProduct(id, proname).then(result=>{
+        console.log(result)
+        res.redirect("/product/all");
+    }).catch(err =>{
+        console.log(err);
+        res.end("update fail")
+    })
+}
